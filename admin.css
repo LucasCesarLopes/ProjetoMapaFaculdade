@@ -1,0 +1,105 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    padding-top: 80px; /* Distância para o cabeçalho fixo */
+}
+
+/* Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(136, 0, 91, 0.9);
+    padding: 15px;
+    z-index: 1000;
+    min-height: 60px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    width: 100px;
+}
+
+header .botao {
+    background-color: rgb(73, 9, 52);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+header .botao:hover {
+    background-color: rgba(248, 203, 233, 0.986);
+}
+
+/* Estilos para o conteúdo principal */
+.conteudo-admin {
+    margin-top: 80px; /* Espaço para o cabeçalho */
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para a tabela */
+.tabela-contatos {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabela-contatos th, .tabela-contatos td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.tabela-contatos th {
+    background-color: rgba(136, 0, 91, 0.9);
+    color: white;
+}
+
+.tabela-contatos tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.botao-excluir {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.botao-excluir:hover {
+    background-color: darkred;
+}
+
+@media (max-width: 768px) {
+    .tabela-contatos {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .botao-excluir {
+        padding: 5px 8px;
+    }
+}

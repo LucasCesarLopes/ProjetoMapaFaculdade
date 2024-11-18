@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mapa interativo da Faculdade UniMetrocamp, explore o mapa do Subsolo 01.">
+    <title>UniMetrocamp - Subsolo 01</title>
+    <link href="inicio.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Menu de navegação -->
+    <header class="menu">
+        <nav>
+            <a href="index.html" aria-label="Página inicial">
+                <img src="logo.svg" alt="Logo da UniMetrocamp">
+            </a>
+            <!-- Botões de navegação -->
+            <a href="sobrenos.html" class="botao" title="Sobre Nós">Sobre Nós</a>
+            <a href="formulario.html" class="botao" title="Entrar em contato com o coordenador">Entrar em contato com o coordenador</a>
+            <a href="login.html" class="botao" title="Área Administrativa ">Área Administrativa</a>
+        </nav>
+    </header>
+
+    <!-- Banner com imagem de fundo -->
+    <section class="banner">
+        <div class="banner-overlay">
+            <!-- O banner pode ter um texto ou call to action -->
+        </div>
+    </section>
+
+    <!-- Conteúdo principal -->
+    <main class="conteúdo">
+        <!-- Bloco de introdução -->
+        <section class="bloco">
+            <h1 class="info-titulo">Mapa da Faculdade</h1>
+            <p class="info-descri">Selecione um dos links abaixo para visualizar o mapa de cada um dos andares da faculdade.</p>
+        </section>
+
+        <!-- Bloco de links para os andares -->
+        <section class="bloco">
+            <div class="colunas">
+                <div class="andar">
+                    <a href="terreo.html" title="Mapa do Térreo" class="andar-link">Térreo</a>
+                </div>
+                <div class="andar">
+                    <a href="mezanino.html" title="Mapa do Mezanino" class="andar-link">Mezanino</a>
+                </div>
+                <div class="andar">
+                    <a href="subsolo1.html" title="Mapa do Subsolo 01" class="andar-link">Subsolo 01</a>
+                </div>
+                <div class="andar">
+                    <a href="subsolo2.html" title="Mapa do Subsolo 02" class="andar-link">Subsolo 02</a>
+                </div>
+                <div class="andar">
+                    <a href="subsolo3.html" title="Mapa do Subsolo 03" class="andar-link">Subsolo 03</a>
+                </div>
+                <div class="andar">
+                    <a href="subsolo4.html" title="Mapa do Subsolo 04" class="andar-link">Subsolo 04</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Selecionar todos os links dos andares
+        const andarLinks = document.querySelectorAll('.andar-link');
+
+        // Função para adicionar o estilo ativo no link selecionado
+        andarLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                // Remover a classe "ativo" de todos os links
+                andarLinks.forEach(link => link.classList.remove('ativo'));
+                
+                // Adicionar a classe "ativo" no link clicado
+                link.classList.add('ativo');
+
+                // Exibir um alerta com o nome do andar
+                alert(`Você selecionou o ${link.textContent}`);
+            });
+        });
+
+        // Adicionar um efeito de hover com JavaScript (opcional, caso queira mais controle)
+        andarLinks.forEach(link => {
+            link.addEventListener('mouseover', () => {
+                link.style.backgroundColor = '#f0f0f0'; // Cor de fundo ao passar o mouse
+                link.style.cursor = 'pointer';
+            });
+
+            link.addEventListener('mouseout', () => {
+                link.style.backgroundColor = ''; // Voltar à cor original
+            });
+        });
+    </script>
+</body>
+</html>
