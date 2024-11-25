@@ -88,34 +88,34 @@ body {
 
 
 .botoescabecalho {
-    display: flex;            
+    display: flex;             /* Usando flexbox para o menu de botões */
     align-content: center;  
     gap: 50px;            
     flex-grow: 1;             
 }
 
-
+/* Estilo para os botões de navegação */
 .botao {
-    background-color: rgb(73, 9, 52); /
-    color: white;               
-    padding: 10px 20px;        
-    text-decoration: none;      
-    border-radius: 5px;        
-    font-size: 16px;           
+    background-color: rgb(73, 9, 52); /* Cor de fundo */
+    color: white;               /* Cor do texto */
+    padding: 10px 20px;         /* Espaçamento interno */
+    text-decoration: none;      /* Retira o sublinhado */
+    border-radius: 5px;         /* Bordas arredondadas */
+    font-size: 16px;            /* Tamanho da fonte */
     transition: background-color 0.3s;
-    display: inline-block;     
-    margin-top: 10px;          
+    display: inline-block;      /* Para garantir que o link se comporte como um botão */
+    margin-top: 10px;           /* spaçamento entre os botões */
 }
 
 .botao:hover {
-    background-color: rgba(248, 203, 233, 0.986); 
+    background-color: rgba(248, 203, 233, 0.986); /* Cor de fundo ao passar o mouse */
 }
 
 
 
 .botao-voltar {
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.986); 
+    background-color: rgba(255, 255, 255, 0.986); /* Cor de fundo vermelha */
 }
 
 .banner {
@@ -128,11 +128,11 @@ body {
 
 
 .conteúdo {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    margin-top: 70px; 
+    display: flex; /* Garante o uso do Flexbox */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    align-items: center; /* Centraliza horizontalmente os itens */
+    justify-content: center; /* Centraliza verticalmente os itens */
+    margin-top: 70px; /* Ajuste para a altura do cabeçalho */
     padding: 40px 20px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
@@ -145,7 +145,7 @@ body {
 
 
 
-
+/* Estilo dos blocos */
 .bloco {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 25px;
@@ -153,13 +153,13 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column; /* Organiza os itens dentro do bloco */
+    align-items: center; /* Centraliza os itens dentro do bloco */
     justify-content: center;
 }
 
 
-
+/* Estilo dos links de andares */
 .colunas {
     display: flex;
     flex-wrap: wrap;
@@ -179,7 +179,7 @@ body {
 
 
 .andar {
-    background-color: #88005b;
+    background-color: #88005b; /* Roxo */
     width: 200px;
     height: 100px;
     display: flex;
@@ -192,6 +192,7 @@ body {
 
 .copy
 
+/*Configações de QRCode */ 
 .QRCode img {
     display: block;         
     margin: 0 auto;         
@@ -210,11 +211,11 @@ body {
 }
 
 .andar:hover {
-    background-color: #ad3383; 
+    background-color: #ad3383; /* Roxo mais claro */
     transform: translateY(-5px);
 }
 
-
+/* Responsividade */
 @media (max-width: 768px) {
     .colunas {
         flex-direction: column;
@@ -225,14 +226,14 @@ body {
         width: 80%;
     }
 
-  
+    /* Ajuste nos botões para telas menores */
     .botao {
-        font-size: 14px; 
-        padding: 8px 16px; 
+        font-size: 14px; /* Reduz o tamanho da fonte do botão */
+        padding: 8px 16px; /* Menos padding */
     }
 
     .conjunto-botoes {
-        margin-top: 20px; /
+        margin-top: 20px; /* Espaçamento entre os botões */
     }
 }
 
@@ -249,9 +250,9 @@ body {
         width: 90%;
     }
 
-  
+    /* Ajuste adicional no botão para telas muito pequenas */
     .botao {
-        font-size: 12px;
-        padding: 6px 12px; 
+        font-size: 12px; /* Reduz ainda mais o tamanho da fonte do botão */
+        padding: 6px 12px; /* Menos padding */
     }
 }
